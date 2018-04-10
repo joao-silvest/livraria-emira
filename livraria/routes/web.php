@@ -11,6 +11,20 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+
+Route::get('/', 'LivrosController@lista'); 
+
+Route::get('/cadastro', 'LivrosController@index'); 
+
+Route::get('/editar/{dados}', 'LivrosController@editaLista');
+
+Route::post('/save', 'LivrosController@save'); 
+
+Route::post('/update', 'LivrosController@update');
+
+Route::post('/delete/{livro}', 'LivrosController@delete');
